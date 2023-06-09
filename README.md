@@ -1,6 +1,6 @@
 # PokeApi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Ejercicio de practica con Angular CLI version 15.0.0. en la que se consumen datos de la PokeApi, mostrando datos de los 150 primeros Pokémons en formato de Tarjetas, en donde se puede visualizar el nombre y el número de cada Pokémon, además de contar con 2 botones para mostrar: uno los detalles de cada uno y el segundo botón para eliminar la tarjeta si así se desea. También cuenta con un Paginador con diferentes opciones, un Filtro que permite buscar de manera individual cada Pokémon y un Botón que permite ordenar tando de modo ascendente como descendente tomando en cuenta la numeración de los mismos. 
 
 ## Development server
 

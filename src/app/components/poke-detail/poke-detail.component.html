@@ -1,0 +1,22 @@
+<mat-card class="card">
+  <mat-card-header>
+    <img mat-card-avatar class="header-image" src="{{pokemonImg}}">
+    <mat-card-title>{{pokemon.name}}</mat-card-title>
+    <mat-card-subtitle>Nro. {{pokemon.id}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image src="{{pokemonImg}}" alt="Pokemon">
+
+  <mat-card-content>
+    <div class="chip-container">
+      <mat-chip-list aria-label="Fish selection" class="center-chips">
+        <mat-chip color="primary" selected>Type: {{pokemon.types?.[0]?.type?.name}}</mat-chip>
+        <mat-chip color="primary" selected>Height: {{pokemon.height}}</mat-chip>
+        <mat-chip color="primary" selected>Weight: {{pokemon.weight}}</mat-chip>
+      </mat-chip-list>
+    </div>
+    <button mat-button color="primary" (click)="goBack()" class="back-button">Volver</button>
+  </mat-card-content>
+</mat-card>
+
+

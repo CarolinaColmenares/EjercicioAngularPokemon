@@ -1,0 +1,152 @@
+@import "../../../assets/styles/variables.scss";
+
+.container {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.inputFilter {
+  background-color: white;
+  margin-bottom: 20px;
+  width: 80% !important;
+  text-decoration: none;
+  padding: 0px 20px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.labelFilter {
+  background-color: white;
+  font-size: 25px;
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+.example-card {
+  max-width: calc(190px + 32px - 16px) !important;
+  width: calc(190px + 32px - 16px) !important;
+  min-height: 274px;
+  border: 3px solid $darkTurquoise;
+}
+
+.cardHorizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -8px;
+  margin-left: 14px;
+}
+
+.cardDiv {
+  flex: 1 1 calc(190px - 16px);
+  margin: 8px;
+  margin-bottom: 24px;
+}
+
+.cardHeader div {
+  width: 100%;
+  margin: auto;
+}
+
+.cardTitle {
+  margin: auto;
+  width: 100%;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.img-pokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.buttonCard {
+  background-color: $turquoise;
+  margin-bottom: 16px;
+}
+
+.mat-card-actions {
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.mat-card-actions button {
+  margin-top: 16px !important;
+}
+
+.orderPokemons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  }
+
+.inputFilter .mat-form-field-flex {
+  width: 80% !important;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.orderPokemons button {
+  margin-left: 20px;
+  font-size: 18px;
+  background-color: $azul;
+  color: yellow;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.filter-button mat-form-field {
+  margin-right: 10px;
+
+}
+
+.filter-button button {
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.mat-toolbar {
+  background-color: $azul;
+  align-items: center;
+}
+
+.header {
+  justify-content: center;
+  background-color: $azul;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 7px;
+  // width: 90%;
+}
+
+.mat-toolbar-row {
+  height: 100px;
+}
+
+.logo {
+  margin-right: 10px;
+  width: 180px;
+  height: 80px;
+  margin-bottom: 18px;
+}
+
+p {
+  font-size: 40px;
+  color: $yellow;
+  font-family: 'Press Start 2P', cursive;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,88 @@
+<div class="container">
+
+
+  <div class="header d-flex align-items-center justify-content-center">
+    <img
+      src="../../../assets/images/pokemonLetras.png"
+      alt="pokexed"
+      class="logo"
+    >
+    <p>Busca Aquí Tu Pokémon Favorito!!</p>
+
+  </div>
+
+  <div class="orderPokemons">
+    <mat-form-field
+      class="inputFilter"
+      style="width: 30% !important;"
+    >
+      <mat-label class="labelFilter">Filter</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Name Pokémon"
+        #input
+      >
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      (click)="orderPokemons();"
+    >
+      {{ orderByAz ? "Click !! y Ordénalos Modo Ascendente !!" : "Click !! y ordénalos Modo Descendente !!" }}
+    </button>
+  </div>
+
+
+  <div *ngIf="showError" class="error-message">
+    Ha ocurrido un error al cargar los pokémon.
+  </div>
+
+    <div class="cardHorizontal" *ngIf="!showError">
+      <div
+        *ngFor="let pokemon of dataSource"
+        class="cardDiv"
+      >
+        <mat-card class="example-card">
+          <mat-card-header class="cardHeader">
+            <mat-card-title class="cardTitle">({{pokemon.position}}) {{pokemon.name}}</mat-card-title>
+          </mat-card-header>
+          <img
+            mat-card-image
+            src="{{pokemon.image}}"
+            class="img-pokemon"
+            alt="Photo of a Shiba Inu"
+          >
+          <mat-card-actions class="mat-card-actions">
+            <button
+              mat-button
+              (click)="getRow(pokemon)"
+              class="buttonCard"
+            >Detalle</button>
+            <button
+              mat-button
+              (click)="deletePokemon(pokemon)"
+              class="buttonCard"
+            >Eliminar</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+
+  <div>
+    <mat-paginator
+      #paginator
+      class="demo-paginator"
+      (page)="onPaginator($event);"
+      [length]="countRows"
+      [pageSize]="pageSize"
+      [showFirstLastButtons]="true"
+      [pageSizeOptions]="[5,20,50,countRows]"
+      [hidePageSize]="false"
+      [pageIndex]="pageIndex"
+      aria-label="Select page"
+    >
+    </mat-paginator>
+  </div>
+
+</div>
