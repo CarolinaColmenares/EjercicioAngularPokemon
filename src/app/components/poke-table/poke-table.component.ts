@@ -8,7 +8,7 @@ import { PokemonService } from 'src/app/services/pokemon.service';
   selector: 'app-poke-table',
   templateUrl: './poke-table.component.html',
   styleUrls: ['./poke-table.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class PokeTableComponent implements OnInit {
   data: any[] = [];
@@ -38,7 +38,7 @@ export class PokeTableComponent implements OnInit {
               position: i,
               image: res.sprites.front_default,
               name: res.name,
-              type: res.types[0].type.name
+              // type: res.types[0].type.name
             };
 
             if (!this.pokemonsDeleted.includes(pokemonData.position)) {

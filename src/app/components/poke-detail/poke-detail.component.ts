@@ -31,7 +31,7 @@ export class PokeDetailComponent implements OnInit {
       res => {
         this.pokemon = res;
         this.pokemonImg = this.pokemon.sprites.front_default;
-        this.pokemonType = res.types[0].type.name
+        this.pokemonType = this.pokemon.types[0].type.name
       },
       err => {
         console.error('Error al obtener el Pokémon:', err);
